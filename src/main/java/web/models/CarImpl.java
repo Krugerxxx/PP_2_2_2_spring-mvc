@@ -1,28 +1,26 @@
 package web.models;
 
-import org.springframework.stereotype.Component;
-
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class Car implements CarsList {
+public class CarImpl implements Cars {
     private String model;
     private String name;
     private int age;
 
 
-    public Car() {
+    public CarImpl() {
     }
 
     @Override
-    public List<CarsList> getCarsList() {
-        List<CarsList> carsLists = new ArrayList<>();
+    public List<Cars> getCarsList() {
+        List<Cars> carsLists = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
-            carsLists.add(new Car());
-            ((Car) carsLists.get(i)).setModel("Модель " + (i + 1));
-            ((Car) carsLists.get(i)).setName("Имя " + (i + 1));
-            ((Car) carsLists.get(i)).setAge(i + 1);
+            carsLists.add(new CarImpl());
+            ((CarImpl) carsLists.get(i)).setModel("Модель " + (i + 1));
+            ((CarImpl) carsLists.get(i)).setName("Имя " + (i + 1));
+            ((CarImpl) carsLists.get(i)).setAge(i + 1);
         }
         return carsLists;
     }

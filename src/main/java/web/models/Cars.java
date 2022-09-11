@@ -2,8 +2,8 @@ package web.models;
 
 import java.util.List;
 
-public interface CarsList {
-    public List<CarsList> getCarsList();
+public interface Cars {
+    public List<Cars> getCarsList();
 
     public String getModel();
 
